@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1. 写移动端页面第一步先加视口  推荐使用完整视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东移动端的主页</title>
+    <!-- 1. 引入公式样式初始化文件base.css -->
+    <!-- <link rel="stylesheet" href="./css/base.css"> -->
+    <!-- 2. 引包引入css文件 引入完了公共样式才引入自己写的样式-->
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <!-- 1. 如果使用了less因为会在less里面就把base 和 index 结和在一起 页面只要引入index.css -->
+    <!-- 因为less源码在less夹里面 编译的css文件 也是在旁边 -->
+    <link rel="stylesheet" href="less/index.css">
+</head>
+
+<body>
+    <!-- 1. 头部区域 -->
+    <!-- 推荐外面大容器使用id选择器 -->
+    <!-- 1. 因为id选择器的优先级很高 提高选择器的优先级 可以方便覆盖一些别人写的样式 -->
+    <!-- 2. id只有一个唯一的 方便JS去获取元素 -->
+    <header id="header">
+        <div class="left">
+            <a href="#"></a>
+        </div>
+        <div class="center">
+            <form action="#">
+                <i class="icon-search"></i>
+                <input type="search" placeholder="请输入要搜索的商品">
+            </form>
+        </div>
+        <div class="right">
+            <a href="#">登录</a>
+        </div>
+    </header>
+    <!-- 轮播图区域 -->
+    <section id="slide">
+        <img src="./images/l1.jpg" alt="">
+    </section>
+    <!-- 导航条区域 -->
+    <nav id="nav">
+        <ul>
+            <!-- li*8>a[href="#"]>img[src="./images/nav$.png"]+p{京东导航} -->
+            <li>
+                <a href="#">
+                    <img src="./images/nav0.png" alt="">
+                    <p>京东导航</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/nav1.png" alt="">
+                    <p>京东导航</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/nav2.png" alt="">
+                    <p>京东导航</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/nav3.png" alt="">
+                    <p>京东导航</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/nav4.png" alt="">
+                    <p>京东导航</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/nav5.png" alt="">
+                    <p>京东导航</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/nav6.png" alt="">
+                    <p>京东导航</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/nav7.png" alt="">
+                    <p>京东导航</p>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+    <!-- 主体商品区域 -->
+    <main id="main"></main>
+    <!-- 底部区域 -->
+    <footer id="footer"></footer>
+</body>
+
+</html>

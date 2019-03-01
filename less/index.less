@@ -12,9 +12,10 @@
     left: 0;
     display: flex;
     z-index: 2;
+
     .left {
-        width: 80px;
-        height: 40px;
+        width: 0.8rem;
+        height: 0.4rem;
         display: flex;
         /* 使用伸缩布局让内容居中 */
         /* 主轴居中 默认主轴X轴 */
@@ -28,11 +29,11 @@
             background-image: url("../images/sprites.png");
             /* 因为所有图片都是2倍图 背景图也不例外也要缩小1半 */
             /* 设置背景图大小 */
-            background-size: 200px 200px;
+            background-size: 2rem 2rem;
             /* 背景图定位也要改 */
-            background-position: 0 -110px;
-            width: 58px;
-            height: 21px;
+            background-position: 0 -1.1rem;
+            width: 0.58rem;
+            height: 0.21rem;
             display: block;
         }
     }
@@ -48,37 +49,38 @@
             position: relative;
 
             i {
-                width: 21px;
-                height: 21px;
+                width: 0.21rem;
+                height: 0.21rem;
                 /* 精灵图也是2倍也要缩小 */
                 background-image: url(../images/sprites.png);
-                background-size: 200px 200px;
-                background-position: -58px -110px;
+                background-size: 2rem 2rem;
+                background-position: -0.58rem -1.1rem;
                 position: absolute;
-                left: 5px;
-                top: 6px;
+                left: 0.05rem;
+                top: 0.06rem;                
             }
 
             input {
                 width: 100%;
-                height: 30px;
+                height: 0.3rem;                
                 /* 圆角只要高度的一半 */
-                border-radius: 15px;
+                border-radius: 0.15rem;
                 /* 设置间距让文字挤到右边不和定位图标重叠 */
-                padding-left: 30px;
+                padding-left: 0.3rem;
+                font-size: 0.14rem;
             }
         }
     }
 
     .right {
-        width: 50px;
-        height: 40px;
+        width: 0.5rem;
+        height: 0.4rem;
 
         a {
             display: block;
             color: #fff;
             text-align: center;
-            line-height: 40px;
+            line-height: 0.4rem;
         }
     }
 }
@@ -88,8 +90,9 @@
     img {
         width: 100%;
     }
+
     // swiper小圆点被选中的样式 修改成白色
-    .swiper-pagination-bullet-active{
+    .swiper-pagination-bullet-active {
         background-color: #fff;
     }
 }
@@ -112,14 +115,14 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                padding: 5px 0;
+                padding: 0.05rem 0;
 
                 img {
-                    width: 40px;
+                    width: 0.4rem;
                 }
 
                 p {
-                    margin-top: 5px;
+                    margin-top: 0.05rem;
                 }
             }
         }
@@ -130,51 +133,52 @@
 #main {
     background-color: #ccc;
     /* 父子元素的间距使用padding */
-    // padding: 0 10px;
+    // padding: 0 0.1rem;
     // 如果不想使用margin 防止塌陷可以使用padding
-    padding: 10px;
+    padding: 0.1rem;
     // 解决margin塌陷问题
     // overflow: hidden;
-    border: 1px solid transparent;
+    border: 0.01rem solid transparent;
     // 把商品底部内容往上挤 要60本身底部有10+50就是60
-    padding-bottom: 60px;
+    padding-bottom: 0.6rem;
+
     // 让自身main和底部的距离
-    // margin-bottom: 50px;
+    // margin-bottom: 0.5rem;
     .seckill {
         /* 兄弟之间的使用margin  但是第一个元素上面没有兄弟 参照父元素就会塌陷*/
-        // margin-top: 10px;
+        // margin-top: 0.1rem;
         background-color: #fff;
 
         .title {
             display: flex;
             // 两端对齐 让left 和 right 居左和居右
             justify-content: space-between;
-            line-height: 30px;
+            line-height: 0.3rem;
 
             .left {
                 display: flex;
 
                 .seckill-icon {
-                    width: 20px;
-                    height: 25px;
-                    margin-left: 5px;
+                    width: 0.2rem;
+                    height: 0.25rem;
+                    margin-left: 0.05rem;
                 }
 
                 .seckill-name {
-                    margin-left: 5px;
+                    margin-left: 0.05rem;
                     /* 使用jd主体色变量 */
                     color: @main-color;
                 }
 
                 .seckill-downtime {
-                    margin-left: 5px;
+                    margin-left: 0.05rem;
 
                     // :not 排除伪类 把你要排除元素选择器放在括号里面
                     span:not(:nth-child(3n)) {
                         display: inline-block;
-                        width: 15px;
-                        height: 15px;
-                        line-height: 15px;
+                        width: 0.15rem;
+                        height: 0.15rem;
+                        line-height: 0.15rem;
                         text-align: center;
                         background-color: #000;
                         color: #fff;
@@ -184,7 +188,7 @@
 
             .right {
                 .seckill-more {
-                    margin-right: 10px;
+                    margin-right: 0.1rem;
                 }
             }
         }
@@ -201,14 +205,14 @@
                         text-align: center;
 
                         img {
-                            width: 110px;
-                            height: 110px;
+                            width: 1.1rem;
+                            height: 1.1rem;
                         }
 
                         p {
                             text-align: center;
                             color: @main-color;
-                            font-size: 12px;
+                            font-size: 0.12rem;
 
                             del {
                                 color: #ccc;
@@ -221,7 +225,7 @@
                 // li:not(:first-child){
                 // ~表示相邻后面的所有兄弟 而且满足后面这个选择器 第一li后面所有兄弟li
                 li~li {
-                    border-left: 1px solid #ccc;
+                    border-left: 0.01rem solid #ccc;
                 }
             }
         }
@@ -229,14 +233,14 @@
 
     .market {
         background-color: #fff;
-        margin-top: 10px;
+        margin-top: 0.1rem;
 
         .title {
-            border-bottom: 1px solid #ccc;
+            border-bottom: 0.01rem solid #ccc;
 
             >h4 {
-                line-height: 30px;
-                padding-left: 30px;
+                line-height: 0.3rem;
+                padding-left: 0.3rem;
                 font-weight: normal;
                 position: relative;
             }
@@ -244,10 +248,10 @@
             h4::before {
                 content: '';
                 position: absolute;
-                width: 4px;
-                height: 14px;
-                left: 20px;
-                top: 7px;
+                width: 0.04rem;
+                height: 0.14rem;
+                left: 0.2rem;
+                top: 0.07rem;
                 background-color: @main-color;
             }
         }
@@ -283,22 +287,26 @@
 }
 
 /* 底部区域的样式 */
-#footer{
+#footer {
     position: fixed;
     bottom: 0px;
     left: 0;
     width: 100%;
     background-color: #fff;
-    ul{
+
+    ul {
         display: flex;
-        li{
+
+        li {
             width: 25%;
-            a{
+
+            a {
                 display: block;
                 text-align: center;
-                img{
-                    width: 65px;
-                    height: 50px;
+
+                img {
+                    width: 0.65rem;
+                    height: 0.5rem;
                 }
             }
         }

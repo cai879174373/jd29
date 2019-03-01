@@ -17,9 +17,18 @@
     -webkit-font-smoothing: antialiased;
 }
 
+/* 改变根元素也是属于公共代码放到base.less里面方便别的文件使用 */
+
+html {
+    // 假设了375屏幕下根元素100px  因为设计稿750 对应手机375 开发使用375调试以375手机作为参照物
+    // 100px 求出100px占据整个375屏多少  100px / 375 == 0.266667  变成vw是百分比*100  26.666667vw
+    // 根元素的字体是用来实现屏幕适配的 跟文字大小没关系
+    font-size: 26.6667vw;
+}
 
 /* 给body设置字体默认样式 */
 body {
+    // 一定不能继承html字体大小文字会变很大  要给body设置 font-size 让后面元素字体参照body
     font-size: 14px;
     font-family: -apple-system, Helvetica, sans-serif;
     line-height: 1.5;

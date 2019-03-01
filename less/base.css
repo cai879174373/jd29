@@ -12,6 +12,10 @@
   /* 防止文字的锯齿样式 */
   -webkit-font-smoothing: antialiased;
 }
+/* 改变根元素也是属于公共代码放到base.less里面方便别的文件使用 */
+html {
+  font-size: 26.6667vw;
+}
 /* 给body设置字体默认样式 */
 body {
   font-size: 14px;

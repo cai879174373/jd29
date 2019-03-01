@@ -12,9 +12,12 @@
   /* 防止文字的锯齿样式 */
   -webkit-font-smoothing: antialiased;
 }
+html {
+  font-size: 26.6667vw;
+}
 /* 给body设置字体默认样式 */
 body {
-  font-size: 14px;
+  font-size: 0.14rem;
   font-family: -apple-system, Helvetica, sans-serif;
   line-height: 1.5;
 }
@@ -61,8 +64,8 @@ i {
   z-index: 2;
 }
 #header .left {
-  width: 80px;
-  height: 40px;
+  width: 0.8rem;
+  height: 0.4rem;
   display: flex;
   /* 使用伸缩布局让内容居中 */
   /* 主轴居中 默认主轴X轴 */
@@ -76,11 +79,11 @@ i {
   background-image: url("../images/sprites.png");
   /* 因为所有图片都是2倍图 背景图也不例外也要缩小1半 */
   /* 设置背景图大小 */
-  background-size: 200px 200px;
+  background-size: 2rem 2rem;
   /* 背景图定位也要改 */
-  background-position: 0 -110px;
-  width: 58px;
-  height: 21px;
+  background-position: 0 -1.1rem;
+  width: 0.58rem;
+  height: 0.21rem;
   display: block;
 }
 #header .center {
@@ -94,33 +97,34 @@ i {
   position: relative;
 }
 #header .center form i {
-  width: 21px;
-  height: 21px;
+  width: 0.21rem;
+  height: 0.21rem;
   /* 精灵图也是2倍也要缩小 */
   background-image: url(../images/sprites.png);
-  background-size: 200px 200px;
-  background-position: -58px -110px;
+  background-size: 2rem 2rem;
+  background-position: -0.58rem -1.1rem;
   position: absolute;
-  left: 5px;
-  top: 6px;
+  left: 0.05rem;
+  top: 0.06rem;
 }
 #header .center form input {
   width: 100%;
-  height: 30px;
+  height: 0.3rem;
   /* 圆角只要高度的一半 */
-  border-radius: 15px;
+  border-radius: 0.15rem;
   /* 设置间距让文字挤到右边不和定位图标重叠 */
-  padding-left: 30px;
+  padding-left: 0.3rem;
+  font-size: 0.14rem;
 }
 #header .right {
-  width: 50px;
-  height: 40px;
+  width: 0.5rem;
+  height: 0.4rem;
 }
 #header .right a {
   display: block;
   color: #fff;
   text-align: center;
-  line-height: 40px;
+  line-height: 0.4rem;
 }
 /* 轮播图样式 */
 #slide img {
@@ -145,21 +149,21 @@ i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5px 0;
+  padding: 0.05rem 0;
 }
 #nav ul li a img {
-  width: 40px;
+  width: 0.4rem;
 }
 #nav ul li a p {
-  margin-top: 5px;
+  margin-top: 0.05rem;
 }
 /* 主体商品的样式 */
 #main {
   background-color: #ccc;
   /* 父子元素的间距使用padding */
-  padding: 10px;
-  border: 1px solid transparent;
-  padding-bottom: 60px;
+  padding: 0.1rem;
+  border: 0.01rem solid transparent;
+  padding-bottom: 0.6rem;
 }
 #main .seckill {
   /* 兄弟之间的使用margin  但是第一个元素上面没有兄弟 参照父元素就会塌陷*/
@@ -168,35 +172,35 @@ i {
 #main .seckill .title {
   display: flex;
   justify-content: space-between;
-  line-height: 30px;
+  line-height: 0.3rem;
 }
 #main .seckill .title .left {
   display: flex;
 }
 #main .seckill .title .left .seckill-icon {
-  width: 20px;
-  height: 25px;
-  margin-left: 5px;
+  width: 0.2rem;
+  height: 0.25rem;
+  margin-left: 0.05rem;
 }
 #main .seckill .title .left .seckill-name {
-  margin-left: 5px;
+  margin-left: 0.05rem;
   /* 使用jd主体色变量 */
   color: #e93b3d;
 }
 #main .seckill .title .left .seckill-downtime {
-  margin-left: 5px;
+  margin-left: 0.05rem;
 }
 #main .seckill .title .left .seckill-downtime span:not(:nth-child(3n)) {
   display: inline-block;
-  width: 15px;
-  height: 15px;
-  line-height: 15px;
+  width: 0.15rem;
+  height: 0.15rem;
+  line-height: 0.15rem;
   text-align: center;
   background-color: #000;
   color: #fff;
 }
 #main .seckill .title .right .seckill-more {
-  margin-right: 10px;
+  margin-right: 0.1rem;
 }
 #main .seckill .content ul {
   display: flex;
@@ -209,40 +213,40 @@ i {
   text-align: center;
 }
 #main .seckill .content ul li a img {
-  width: 110px;
-  height: 110px;
+  width: 1.1rem;
+  height: 1.1rem;
 }
 #main .seckill .content ul li a p {
   text-align: center;
   color: #e93b3d;
-  font-size: 12px;
+  font-size: 0.12rem;
 }
 #main .seckill .content ul li a p del {
   color: #ccc;
 }
 #main .seckill .content ul li ~ li {
-  border-left: 1px solid #ccc;
+  border-left: 0.01rem solid #ccc;
 }
 #main .market {
   background-color: #fff;
-  margin-top: 10px;
+  margin-top: 0.1rem;
 }
 #main .market .title {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 0.01rem solid #ccc;
 }
 #main .market .title > h4 {
-  line-height: 30px;
-  padding-left: 30px;
+  line-height: 0.3rem;
+  padding-left: 0.3rem;
   font-weight: normal;
   position: relative;
 }
 #main .market .title h4::before {
   content: '';
   position: absolute;
-  width: 4px;
-  height: 14px;
-  left: 20px;
-  top: 7px;
+  width: 0.04rem;
+  height: 0.14rem;
+  left: 0.2rem;
+  top: 0.07rem;
   background-color: #e93b3d;
 }
 #main .market .content {
@@ -285,6 +289,6 @@ i {
   text-align: center;
 }
 #footer ul li a img {
-  width: 65px;
-  height: 50px;
+  width: 0.65rem;
+  height: 0.5rem;
 }

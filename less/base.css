@@ -14,7 +14,6 @@
 }
 /* 给body设置字体默认样式 */
 body {
-  background: #fff;
   font-size: 14px;
   font-family: -apple-system, Helvetica, sans-serif;
   line-height: 1.5;
@@ -37,4 +36,16 @@ img {
 i {
   /* 去掉斜体 */
   font-style: normal;
+}
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
 }

@@ -1,5 +1,9 @@
- /* 方便开发使用* 上线的时候把常见有间距标签改一下就好了 */
- * {
+// 通常全局变量都放到公共样式里面 所有less文件都能使用
+// 定义了一个jd主题色的变量
+@main-color: #e93b3d;
+
+/* 方便开发使用* 上线的时候把常见有间距标签改一下就好了 */
+* {
     margin: 0;
     padding: 0;
     /* 给所有元素设置这个盒模型属性为了让盒模型的和设置的宽度一样 
@@ -13,9 +17,9 @@
     -webkit-font-smoothing: antialiased;
 }
 
+
 /* 给body设置字体默认样式 */
 body {
-    background: #fff;
     font-size: 14px;
     font-family: -apple-system, Helvetica, sans-serif;
     line-height: 1.5;
@@ -43,4 +47,21 @@ img {
 i {
     /* 去掉斜体 */
     font-style: normal;
+}
+
+// 定义一些公共边框类名
+.bt {
+    border-top: 1px solid #ccc;
+}
+
+.bb {
+    border-bottom: 1px solid #ccc;
+}
+
+.bl {
+    border-left: 1px solid #ccc;
+}
+
+.br {
+    border-right: 1px solid #ccc;
 }

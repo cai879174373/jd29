@@ -14,7 +14,6 @@
 }
 /* 给body设置字体默认样式 */
 body {
-  background: #fff;
   font-size: 14px;
   font-family: -apple-system, Helvetica, sans-serif;
   line-height: 1.5;
@@ -38,6 +37,18 @@ i {
   /* 去掉斜体 */
   font-style: normal;
 }
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
 /* 头部区域样式 */
 #header {
   position: fixed;
@@ -47,7 +58,7 @@ i {
   top: 0;
   left: 0;
   display: flex;
-  /* background-color:red; */
+  z-index: 2;
 }
 #header .left {
   width: 80px;
@@ -82,7 +93,6 @@ i {
   width: 100%;
   position: relative;
 }
-/* 设置form表单里面的图标样式 */
 #header .center form i {
   width: 21px;
   height: 21px;
@@ -116,6 +126,9 @@ i {
 #slide img {
   width: 100%;
 }
+#slide .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
 /* 导航区域样式 */
 #nav ul {
   display: flex;
@@ -139,4 +152,139 @@ i {
 }
 #nav ul li a p {
   margin-top: 5px;
+}
+/* 主体商品的样式 */
+#main {
+  background-color: #ccc;
+  /* 父子元素的间距使用padding */
+  padding: 10px;
+  border: 1px solid transparent;
+  padding-bottom: 60px;
+}
+#main .seckill {
+  /* 兄弟之间的使用margin  但是第一个元素上面没有兄弟 参照父元素就会塌陷*/
+  background-color: #fff;
+}
+#main .seckill .title {
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+}
+#main .seckill .title .left {
+  display: flex;
+}
+#main .seckill .title .left .seckill-icon {
+  width: 20px;
+  height: 25px;
+  margin-left: 5px;
+}
+#main .seckill .title .left .seckill-name {
+  margin-left: 5px;
+  /* 使用jd主体色变量 */
+  color: #e93b3d;
+}
+#main .seckill .title .left .seckill-downtime {
+  margin-left: 5px;
+}
+#main .seckill .title .left .seckill-downtime span:not(:nth-child(3n)) {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+#main .seckill .title .right .seckill-more {
+  margin-right: 10px;
+}
+#main .seckill .content ul {
+  display: flex;
+}
+#main .seckill .content ul li {
+  flex: 1;
+}
+#main .seckill .content ul li a {
+  display: block;
+  text-align: center;
+}
+#main .seckill .content ul li a img {
+  width: 110px;
+  height: 110px;
+}
+#main .seckill .content ul li a p {
+  text-align: center;
+  color: #e93b3d;
+  font-size: 12px;
+}
+#main .seckill .content ul li a p del {
+  color: #ccc;
+}
+#main .seckill .content ul li ~ li {
+  border-left: 1px solid #ccc;
+}
+#main .market {
+  background-color: #fff;
+  margin-top: 10px;
+}
+#main .market .title {
+  border-bottom: 1px solid #ccc;
+}
+#main .market .title > h4 {
+  line-height: 30px;
+  padding-left: 30px;
+  font-weight: normal;
+  position: relative;
+}
+#main .market .title h4::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 14px;
+  left: 20px;
+  top: 7px;
+  background-color: #e93b3d;
+}
+#main .market .content {
+  display: flex;
+}
+#main .market .content .left {
+  width: 50%;
+}
+#main .market .content .left a {
+  display: block;
+}
+#main .market .content .left a img {
+  width: 100%;
+}
+#main .market .content .right {
+  width: 50%;
+}
+#main .market .content .right a {
+  display: block;
+}
+#main .market .content .right a img {
+  width: 100%;
+}
+/* 底部区域的样式 */
+#footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  width: 25%;
+}
+#footer ul li a {
+  display: block;
+  text-align: center;
+}
+#footer ul li a img {
+  width: 65px;
+  height: 50px;
 }
